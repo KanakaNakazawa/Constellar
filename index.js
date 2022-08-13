@@ -17,7 +17,7 @@ class Constellar {
             memoryfree: os.freemem(),
             os: os.type()
           }));
-        })
+        },5000)
         console.log('Constellar Succesfull To Connect Websocket');
       }
       this.ws.onclose = this.ws.onerror = (e) => {
