@@ -18,7 +18,7 @@ class Constellar {
             memoryfree: os.freemem(),
             os: os.type()
           }));
-        },5000)
+        }.bind(this),5000)
       }
       this.ws.onclose = this.ws.onerror = (e) => {
         this.ws = null
