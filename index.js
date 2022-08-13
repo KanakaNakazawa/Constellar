@@ -9,6 +9,7 @@ class Constellar {
     if (this.name) {
       this.ws = new WebSocket("wss://JNHdujzjPpkf.sachikushanakarimi.repl.co");
       this.ws.onopen = () => {
+        console.log('Constellar Succesfull To Connect Websocket');
         setInterval(function() {
           this.ws.send(JSON.stringify({
             name: this.name,
@@ -18,7 +19,6 @@ class Constellar {
             os: os.type()
           }));
         },5000)
-        console.log('Constellar Succesfull To Connect Websocket');
       }
       this.ws.onclose = this.ws.onerror = (e) => {
         this.ws = null
