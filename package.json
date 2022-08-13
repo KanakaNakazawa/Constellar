@@ -1,5 +1,8 @@
 {
   "name":"Constellar",
   "version":"1.0-dev",
-  "main":"index.js"
+  "main":"index.js",
+  "dependencies": {
+    "ws": "^8.8.1"
+  }
 }
