@@ -13,7 +13,7 @@ class Constellar {
         setInterval(function() {
           this.ws.send(JSON.stringify({
             name: this.name,
-            cpu: os.cpu(),
+            cpu: os.cpus(),
             memoryusage: os.totalmem() - os.freemem(),
             memoryfree: os.freemem(),
             os: os.type()
